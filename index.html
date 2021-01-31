@@ -50,11 +50,11 @@
             </div>
             <div class="input-group f-class">
                 <div>
-                    <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <label   for="">First Class <span id = "case-total"> ($150)</span> </label>
+                    <input  id="case-count" class="form-control" type="number" name="">
                 </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
+                <div  class="plus-minus-btn">
+                    <p> <span id = "moneyPlus" >+</span> <span id = "moneyMinus">-</span></p>
                 </div>
             </div>
             
@@ -64,7 +64,7 @@
                     <input class="inp-style inp-width" type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <p> <span>+</span> <span >-</span> </p>
                 </div>
             </div>
             <div class="calculations">
@@ -103,7 +103,17 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
-
+        <script>
+            document.getElementById("moneyPlus").addEventListener("click", function () {
+               const caseInput = document.getElementById("case-count");
+                const caseCount = parseInt(caseInput.value);
+                const caseNewCount = caseCount + 1;
+                caseInput.value = caseNewCount;
+                const caseTotal = caseNewCount * 150;
+                document.getElementById("case-total").innerText = caseTotal;
+            })
+    
+        </script>
     <!--Thank You-->
 </body>
 
